@@ -1,3 +1,35 @@
-
 anti_spoofing_model.h5
 anti_spoofing_model_resnet50_deep_fullface.h5
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Test videos and temporary files
+*.mp4
+*.avi
+FIX_COMMANDS.txt
+
+# Temporary scripts
+analyze_results.py
+analyze_this_csv.py
+save_model_from_notebook.py
+test_my_video.py
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

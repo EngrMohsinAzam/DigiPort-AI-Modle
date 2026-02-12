@@ -75,7 +75,9 @@ The dataset used in this project is a combination of the
 - **`/notebooks/`**: Jupyter notebooks for data preprocessing, model training, and evaluation.
 - **`/results/`**: CSV files with predictions and accuracy metrics for the models.
 
-## How to Use
+## Quick Start
+
+### Installation
 
 1. **Clone the repository:**
    ```bash
@@ -83,14 +85,73 @@ The dataset used in this project is a combination of the
    cd Video-Based-Face-Liveness-Detection
    ```
 
-2. **Install dependencies:**
-   Ensure you have Python 3 and the required libraries installed.
+2. **Create a virtual environment (recommended):**
+   ```bash
+   # Windows
+   python -m venv venv
+   venv\Scripts\activate
+   
+   # Linux/Mac
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
 
-3. **Run the notebooks:**
-   Navigate to the `/notebooks/` directory and open the relevant notebook in Google Colab or Jupyter.
+3. **Install dependencies:**
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
 
-4. **Evaluate the models:**
-   Follow the instructions in the notebooks to train and evaluate the models using your dataset.
+4. **Verify installation:**
+   ```bash
+   python test_installation.py
+   ```
+
+### Running the Project
+
+1. **Start Jupyter Notebook:**
+   ```bash
+   # Windows
+   jupyter notebook
+   
+   # Or specify the notebooks directory directly
+   jupyter notebook notebooks/
+   ```
+   
+   This will open Jupyter in your default browser at `http://localhost:8888/`
+
+2. **Open and run notebooks:**
+   - Navigate to `/notebooks/` directory in Jupyter interface
+   - Open `Feature Extraction.ipynb` for classical ML approaches (CNN, InceptionV3)
+   - Open `Deep Learning.ipynb` for deep learning models (ResNet-50, ViT)
+   - Run cells sequentially using `Shift + Enter` or click "Run All" from the Cell menu
+
+3. **Alternative: Use Google Colab**
+   - Upload notebooks to [Google Colab](https://colab.research.google.com/)
+   - The notebooks will automatically install required packages
+   - Mount your Google Drive if you need to access the dataset
+
+### Testing the Models
+
+1. **Using test_installation.py:**
+   ```bash
+   python test_installation.py
+   ```
+   This script verifies all required packages are installed correctly.
+
+2. **Testing with your own video:**
+   - Place your video file in the project root directory
+   - Use the trained models from the notebooks to make predictions
+   - The notebooks contain examples of:
+     - Frame extraction from videos
+     - Face detection and cropping using MTCNN
+     - Making predictions on individual frames
+     - Calculating accuracy metrics
+
+3. **Expected outputs:**
+   - Model predictions are saved in `/results/` directory as CSV files
+   - Training metrics and plots are displayed within the notebooks
+   - Trained models are saved in `/models/` directory
 
 ## Acknowledgements
 
